@@ -13,10 +13,13 @@
   <ion-label position="floating">Diary Title</ion-label>
   <ion-input type="text" formControlName="info_title"></ion-input>
 </ion-item>
+
 <ion-item>
 <ion-label positon="floating">Diary Description</ion-label>
-<ion-input type="text" formControlName="info_description"></ion-input>
+<ion-textarea type="text" formControlName="info_description"></ion-textarea>
 </ion-item>
+
 <ion-button shape="round" color="primary" expand='block' [disabled]="!infoForm.valid" (click)="updateInfo()">Update</ion-button>
+
 </form>
 </ion-content>

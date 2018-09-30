@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Create Diary</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<form [formGroup]="infoForm">
+<ion-item>
+  <ion-label position="floating">Diary Title </ion-label>
+  <ion-input type="text" formControlName="info_title"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="floating">Diary Description</ion-label>
+<ion-input type="text" formControlName="info_description"></ion-input>
+</ion-item>
+<ion-button shape="round" color="primary" expand="block" [disabled]="!infoForm.valid" (click)="saveDiary()">Save</ion-button>
+</form>
+</ion-content>

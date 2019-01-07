@@ -5,20 +5,27 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import * as firebase from 'firebase' ;
 
+// import { config } from './firebaseConfig';
 
-const config = {
-  apiKey: "AIzaSyD6RYfTcwCwff6U3Tn1fGIPLlNL_UAp8cQ",
-  authDomain: "diarymuaz.firebaseapp.com",
-  databaseURL: "https://diarymuaz.firebaseio.com",
-  projectId: "diarymuaz",
-  storageBucket: "diarymuaz.appspot.com",
-  messagingSenderId: "14375745897"
-};
+export const config = {
+  production : false,
+    firebase: {
+    apiKey: "--insert your api key -----",
+    authDomain: "insert from firebase config",
+    databaseURL: "insert your own database URL",
+    projectId: "your project ID",
+    storageBucket: "insert the ID",
+    messagingSenderId: "insert your own messaging id"
+    }
+  };
+  
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
 })
+
+
 export class AppComponent {
   constructor(
     private platform: Platform,
@@ -29,10 +36,10 @@ export class AppComponent {
   }
 
   initializeApp() {
+    firebase.initializeApp(config.firebase);
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
-    firebase.initializeApp(config);
   }
 }

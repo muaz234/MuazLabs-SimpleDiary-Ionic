@@ -9,6 +9,19 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+export const config = {
+  production : false,
+    firebase: {
+    apiKey: "AIzaSyD6RYfTcwCwff6U3Tn1fGIPLlNL_UAp8cQ",
+    authDomain: "diarymuaz.firebaseapp.com",
+    databaseURL: "https://diarymuaz.firebaseio.com",
+    projectId: "diarymuaz",
+    storageBucket: "diarymuaz.appspot.com",
+    messagingSenderId: "14375745897"
+    }
+  };
+  
+  
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

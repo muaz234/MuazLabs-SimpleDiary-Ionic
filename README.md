@@ -14,9 +14,11 @@ Functionalities:
 To run the file on android.
 
 1. Clone the repo
-2. run in terminal ionic cordova platform add android
-3. run in terminal ionic cordova run android --device.
-4. Make sure development mode is enabled in your device bundled with allow install from USB
+2. add your own firebase config file.
+3. run npm install firebase --save with root priviledges.
+4. run in terminal ionic cordova platform add android
+5. run in terminal ionic cordova run android --device.
+6. Make sure development mode is enabled in your device bundled with allow install from USB
 
 
 
